@@ -67,7 +67,7 @@ jobs:
         body: |
           yuri.
           
-          # 🚨 looking for binary? version? 🚨
+          # 🚨 looking for binary? 🚨
           root/Minecraft.Client/Minecraft.Client
         files: |
           artifacts/*
