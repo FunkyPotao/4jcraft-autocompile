@@ -14,13 +14,13 @@ jobs:
       - uses: actions/checkout@v4
 
       # remove unused software
-      - name: read run smh
+      - name: remove unused
         run: |
           sudo apt remove firefox php8.3* 
           
 
       # update & upgrade
-      - name: read run smh
+      - name: update && upgrade
         run: |
           sudo apt update && sudo apt upgrade
           
