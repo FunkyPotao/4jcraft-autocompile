@@ -55,8 +55,8 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v6
         with:
-          name: 4jcraft/release.7z
-          path: 4jcraft/release.7z
+          name: release.7z
+          path: 4jcraft/
           
   release:
     needs: build
