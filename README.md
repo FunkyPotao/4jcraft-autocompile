@@ -1,7 +1,9 @@
-# 4jcraft-autocompile
-daily autocompile 4jcraft so you dont have to
+### 4jcraft-autocompile
 
-## [BUILDS](https://github.com/FunkyPotao/4jcraft-autocompile/releases)
+# what does it do?
+daily compile 4jcraft automaticaly so you dont have to
+
+## [download it here!!!](https://github.com/FunkyPotao/4jcraft-autocompile/releases)
 
 
 #todo:
