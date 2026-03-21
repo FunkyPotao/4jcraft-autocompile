@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      # does checkouts whatever those are
+      - uses: actions/checkout@v4
     
       - name: clone 4jcraft
         run: git clone https://github.com/4jcraft/4jcraft.git
