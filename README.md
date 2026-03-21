@@ -1,4 +1,4 @@
-### 4jcraft-autocompile
+## 4jcraft-autocompile
 
 # what does it do?
 daily compile 4jcraft automaticaly so you dont have to
