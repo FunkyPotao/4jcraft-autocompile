@@ -35,6 +35,11 @@ jobs:
         run: |
           git clone https://github.com/4jcraft/4jcraft.git
 
+      - name: cd
+        run: |
+          ls,
+          cd 4jcraft
+          
 
       - name: do build dir with meson
         run: |
