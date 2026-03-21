@@ -16,8 +16,7 @@ jobs:
       # remove unused software
       - name: read run smh
         run: |
-          sudo apt remove firefox
-          sudo apt remove ubuntu-desktop
+          sudo apt remove firefox php8.3* 
           
 
       # update & upgrade
@@ -37,7 +36,7 @@ jobs:
 
       - name: cd
         run: |
-          ls,
+          ls
           cd 4jcraft
           
 
