@@ -13,6 +13,13 @@ jobs:
       # does checkouts whatever those are
       - uses: actions/checkout@v4
 
+      # remove unused software
+      - name: read run smh
+        run: |
+          sudo apt remove firefox
+          sudo apt remove ubuntu-desktop
+          
+
       # update & upgrade
       - name: read run smh
         run: |
