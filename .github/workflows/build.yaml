@@ -43,3 +43,41 @@ jobs:
           meson setup build
           
           meson compile -C build
+
+
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download all artifacts
+      uses: actions/download-artifact@v7
+      with:
+        path: artifacts
+        merge-multiple: true
+
+    - name: Update release
+      uses: andelf/nightly-release@main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: nightly
+        name: Nightly Client Release
+        body: |
+          yuri.
+          
+          # 🚨 looking for binary? version? 🚨
+          root/Minecraft.Client/Minecraft.Client
+        files: |
+          artifacts/*
+
+  cleanup:
+    needs: [build, release]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+    - name: Cleanup artifacts
+      uses: geekyeggo/delete-artifact@v5
+      with:
+        name: build-*
