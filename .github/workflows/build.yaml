@@ -12,15 +12,21 @@ jobs:
     steps:
       # does checkouts whatever those are
       - uses: actions/checkout@v4
-    
-      - name: clone 4jcraft
-        run: |
-          git clone https://github.com/4jcraft/4jcraft.git
 
+      # update & upgrade
+      - name: Run a multi-line script
+        run: |
+          sudo apt update && sudo apt upgrade
+          
 
       - name: download dependencys
         run: |
           sudo apt-get install -y build-essential libsdl2-dev libgl-dev libglu1-mesa-dev libpthread-stubs0-dev
+          
+          
+      - name: clone 4jcraft
+        run: |
+          git clone https://github.com/4jcraft/4jcraft.git
 
 
       - name: do build dir with meson
