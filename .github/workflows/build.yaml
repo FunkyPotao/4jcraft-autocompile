@@ -1,0 +1,24 @@
+name: Auto Releases
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    
+      - name: clone 4jcraft
+        run: git clone https://github.com/4jcraft/4jcraft.git
+
+      - name: download dependencys
+        run: sudo apt-get install -y build-essential libsdl2-dev libgl-dev libglu1-mesa-dev libpthread-stubs0-dev
+
+      - name: do build dir with meson
+        run: meson setup build
+
+      - name: now do compily compily
+        run: meson compile -C build
