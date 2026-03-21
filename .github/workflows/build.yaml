@@ -36,25 +36,26 @@ jobs:
 
       - name: cd > do build dir with meson > do compily compily
         run: |
-          ls
           cd 4jcraft
-          ls
           
           meson setup build
           
           meson compile -C build
 
+      - name: do packaging
+        run: |
+          cd 4jcraft/build
           echo ./Minecraft.Client/Minecraft.Client > Minecraft.sh
           cd ..
           mkdir 4jcraft-bin
-          cp -r Minecraft.Client/* 4jcraft-bin
+          cp -r build/* 4jcraft-bin
           7z a -r release.7z "4jcraft-bin/"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v6
         with:
           name: 4jcraft/release.7z
-          path: staging/*
+          path: 4jcraft/release.7z
           
   release:
     needs: build
