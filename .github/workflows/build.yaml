@@ -38,7 +38,7 @@ jobs:
         run: |
           ls
           cd 4jcraft
-          
+          ls
 
       - name: do build dir with meson
         run: |
