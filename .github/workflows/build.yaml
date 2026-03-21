@@ -44,6 +44,7 @@ jobs:
 
       - name: do packaging
         run: |
+          ls
           cd 4jcraft/build
           echo ./Minecraft.Client/Minecraft.Client > Minecraft.sh
           cd ..
