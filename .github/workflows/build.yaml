@@ -52,12 +52,14 @@ jobs:
           mkdir 4jcraft-bin
           cp -r build/* 4jcraft-bin
           7z a -r release.7z "4jcraft-bin/"
+          mkdir artifact
+          mv release.7z artifact
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v6
         with:
           name: release.7z
-          path: 4jcraft/
+          path: 4jcraft/artifact
           
   release:
     needs: build
