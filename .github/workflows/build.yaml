@@ -85,7 +85,7 @@ jobs:
       with:
         tag_name: ${{ env.CURRENT_DATE }}
         prerelease: false
-        name: Nightly Client Release
+        name: Release-${{ env.CURRENT_DATE }}
         body: |
           yuri.
           
