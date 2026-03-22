@@ -75,15 +75,15 @@ jobs:
       with:
         path: artifacts
         
-    - name: getdate in a var
-      run: datevar=$(date)
+    - name: Get current date
+      run: echo "CURRENT_DATE=$(date +'%Y%m%dT%H%M%S')" >> $GITHUB_ENV
 
     - name: Update release
       uses: andelf/nightly-release@main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ env.datevar }}
+        tag_name: ${{ env.CURRENT_DATE }}
         prerelease: false
         name: Nightly Client Release
         body: |
