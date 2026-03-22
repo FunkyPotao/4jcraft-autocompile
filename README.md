@@ -2,7 +2,7 @@
 
 ## what does it do?
 
-daily compile 4jcraft automaticaly so you dont have to
+daily compile [4jcraft](https://github.com/4jcraft/4jcraft.git) automaticaly so you dont have to
 
 # [download it here!!!](https://github.com/FunkyPotao/4jcraft-autocompile/releases/tag/nightly)
 
