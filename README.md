@@ -10,5 +10,4 @@ daily compile 4jcraft automaticaly so you dont have to
 # todo:
 - use llvm for compilation or smthn
 - dont make 1 run have 1293 scripts lel
-- make it show changes in releases
 - mabye compile more branches like javaui
