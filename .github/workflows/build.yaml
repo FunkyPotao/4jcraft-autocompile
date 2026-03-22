@@ -50,7 +50,8 @@ jobs:
         run: |
           ls
           cd 4jcraft/build
-          echo ./Minecraft.Client/Minecraft.Client > Minecraft.sh
+          echo cd Minecraft.Client > Minecraft.sh
+          echo ./Minecraft.Client >> Minecraft.sh
           cd ..
           mkdir 4jcraft-bin
           cp -r build/* 4jcraft-bin
